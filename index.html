@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpeg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portafolio</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                    <i class="fas fa-times" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openMenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Computing Student</p>
+                <h1>Hola, soy Jhon Steeven</h1>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------about me--------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/img.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        Estudiante de Ingeniería Informática en la Mención de Computación. Gran apasionado del análisis de datos, 
+                        aprendizaje automático y en los modelos de toma de decisiones. Ambiciono extender mis competencias en el área 
+                        relacionada con el Big Data aportando los conocimientos que he adquirido en estos años de carrera.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Educación</p>
+                        <p class="tab-links" onclick="opentab('experience')">Competencias</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Aprendizaje automático</span><br>Python<br>Pandas<br>NumPy<br>TensorFlow<br>Scikit-learn</li>
+                            <li><span>Desarrollo Web</span><br>HTML5, CSS, JavaScript, Bootstrap</li>
+                            <li><span>Bases de datos</span><br>SQLite, MySQL, PostgreSQL</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Sep 2019 - Actualidad</span><br>Grado en Ingeniería Informática - Mención Computación</li>
+                            <li><span>Sep 2017 - may 2019</span><br>Bachillerato de Ciencias y Tecnología</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span></span><br>Autodidacta</li>
+                            <li><span></span><br>Aprendizaje rápido</li>
+                            <li><span></span><br>Disciplinado</li>
+                            <li><span></span><br>Resolución de problemas</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------------------Portfolio--------------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work_3.png">
+                    <div class="layer">
+                        <h3>Visualización Crecimiento Población</h3>
+                        <p>Proyecto realizado con D3.js relacionado con la visualización de datos</p>
+                        <a href="https://github.com/jhoncabanilla/Crecimiento-Poblacion"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work_2.png">
+                    <div class="layer">
+                        <h3>ULearn</h3>
+                        <p>Servicio web destinado a facilitar la educación tecnológica a distancia para la transmisión de los conocimientos
+                             informáticos, tanto para alumnos como profesionales del sector que quieran aprender o educar.</p>
+                        <a href="https://github.com/jhoncabanilla/Proyecto-WEB"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work_1.png">
+                    <div class="layer">
+                        <h3>Connect Four Game</h3>
+                        <p>Desarrollo del famoso juego Conecta Cuatro utilizando pygame para diseñar la UI</p>
+                        <a href="https://github.com/jhoncabanilla/ConnectFour"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/jhoncabanilla" class="btn">Ver más</a>
+        </div>
+    </div>
+
+    <!----------------------------Contact--------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i>srjhonst@hotmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i>+34 674 96 10 77</p>
+                    <div class="social-icons">
+                        <a href="http://www.linkedin.com/in/jhoncabanilla"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/sr_jhon19/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <!-- <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a> -->
+                </div>
+
+            <!----
+                <div class="contact-rigth">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Enviar</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>-
+            ---->
+
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Jhon</p>
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for (tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sideMenu = document.getElementById("sidemenu");
+
+        function openMenu(){
+            sideMenu.style.right = "0";
+        }
+
+        function closeMenu(){
+            sideMenu.style.right = "-200px";
+        }
+
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbysU3A_iMpef3XhZ5RBnZNuK23HD5lRWSC-QHnh5hMfChimNX_mcAt2YUkecYDD6yDOhw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Mensaje enviado con éxito"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    
+</body>
+</html>
